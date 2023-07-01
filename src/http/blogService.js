@@ -1,7 +1,7 @@
 import api from "./axiosPublic";
 
 const token = JSON.parse(localStorage.getItem("token"))
-const BASE_URL = "http://localhost:5000/api/v1";
+const BASE_URL = "https://blog-application-mern.netlify.app/api/v1";
 const createBlog = async (data) => {
   const config = {
     headers: {
