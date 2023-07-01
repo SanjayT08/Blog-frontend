@@ -1,7 +1,7 @@
 import api from "./axiosPublic";
 
 const token = JSON.parse(localStorage.getItem("token"))
-const BASE_URL = "https://blog-application-mern.netlify.app/api/v1";
+
 const createBlog = async (data) => {
   const config = {
     headers: {
@@ -87,28 +87,28 @@ const deleteBlog = async (blogId) => {
 // };
 
 const getLikes = async (blogId) => {
-  const response = await axios.post(`${BASE_URL}/like/getLikes`, {
+  const response = await axios.post(`${process.env.BASE_URL}/like/getLikes`, {
     blogId,
   });
   return response.data;
 }
 
 const getDislikes = async (blogId) => {
-  const response = await axios.post(`${BASE_URL}/like/getDislikes`, {
+  const response = await axios.post(`${process.env.BASE_URL}/like/getDislikes`, {
     blogId,
   });
   return response.data;
 }
 
 const likeBlog = async (blogId) => {
-  const response = await axios.post(`${BASE_URL}/like/upLike`, {
+  const response = await axios.post(`${process.env.BASE_URL}/like/upLike`, {
     blogId,
   });
   return response.data;
 }
 
 const dislikeBlog = async (blogId) => {
-  const response = await axios.post(`${BASE_URL}/like/upDislike`, {
+  const response = await axios.post(`${process.env.BASE_URL}/like/upDislike`, {
     blogId,
   });
   return response.data;
