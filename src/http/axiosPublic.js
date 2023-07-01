@@ -1,7 +1,7 @@
 import axios from "axios";
-
+const BASE_URL = "https://blog-backend-api-p4jb.onrender.com"; 
 const api = axios.create({
-  baseURL: process.env.BASE_URL,
+  baseURL: BASE_URL,
   withCredentials: true,
   headers: {
     "Content-Type": "application/json",
