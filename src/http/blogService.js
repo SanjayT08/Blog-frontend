@@ -1,9 +1,11 @@
 import api from "./axiosPublic";
+import axios from "axios";
 
-const token = JSON.parse(localStorage.getItem("token"))
+// const token = JSON.parse(localStorage.getItem("token"))
 const BASE_URL = "https://blog-backend-api-p4jb.onrender.com";
 
 const createBlog = async (data) => {
+  const token = JSON.parse(localStorage.getItem("token"));
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -20,6 +22,7 @@ const createBlog = async (data) => {
 
 
 const getBlog = async (blogId) => {
+  const token = JSON.parse(localStorage.getItem("token"));
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -35,6 +38,7 @@ const getBlog = async (blogId) => {
 };
 
 const getBlogs = async (token) => {
+  const token = JSON.parse(localStorage.getItem("token"));
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -50,6 +54,7 @@ const getBlogs = async (token) => {
 };
 
 const deleteBlog = async (blogId) => {
+  const token = JSON.parse(localStorage.getItem("token"));
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
