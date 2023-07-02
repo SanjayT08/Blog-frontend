@@ -1,7 +1,7 @@
 import api from "./axiosPublic";
 import axios from "axios";
 
-// const token = JSON.parse(localStorage.getItem("token"))
+const token = JSON.parse(localStorage.getItem("token"))
 const BASE_URL = "https://blog-backend-api-p4jb.onrender.com";
 
 // const token = JSON.parse(localStorage.getItem("token"));
