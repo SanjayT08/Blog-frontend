@@ -39,6 +39,7 @@ const SignUp = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const { username, email, password } = formData;
+    console.log(formData)
 
     if (!username || !email || !password) {
       return;

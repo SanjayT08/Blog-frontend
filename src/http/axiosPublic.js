@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "https://blog-backend-api-p4jb.onrender.com"; 
+const BASE_URL = "https://blog-backend-api-p4jb.onrender.com/api/v1"; 
 const api = axios.create({
   baseURL: BASE_URL,
   withCredentials: true,
